@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <!-- 
+    Author: Kyle Robertson
+    Description: A webpage that checks user inputs (name and zip code) and reveals a secret message if valid.
+    -->
+
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>User Input Validation</title>
+    <link rel="stylesheet" href="stringscss.css">
+    <script src="stringsjs.js"></script>
+</head>
+
+<body>
+    <!-- Page header -->
+    <h1>User Input Validation</h1>
+
+    <!-- Prompt for the user's first name -->
+    <input type="text" id="firstName" placeholder="Enter your first name" onkeydown="handleKeyDown(event, 'lastName')">
+    <br>
+    
+    <!-- Prompt for the user's last name -->
+    <input type="text" id="lastName" placeholder="Enter your last name" onkeydown="handleKeyDown(event, 'zipCode')">
+    <br>
+    
+    <!-- Prompt for the user's zip code -->
+    <input type="text" id="zipCode" placeholder="Enter your zip code" onkeydown="handleKeyDown(event, 'submit')">
+    <br>
+    
+    <!-- Button to validate input and reveal the secret message -->
+    <button id="submit" onclick="validateInputs()">Submit</button>
+
+    <!-- Area to display the result or secret message -->
+    <div id="result"></div>
+
+    <!-- Image to be revealed only when the secret message is shown -->
+    <img src="secret.jpg" id="secretImage" alt="Creative Element">
+</body>
+
+</html>
